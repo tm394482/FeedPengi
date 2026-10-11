@@ -1,0 +1,116 @@
+{
+	"name": "Event sheet 3",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 676014590822485
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 968671060499351,
+					"parameters": {
+						"audio-file": {
+							"path": "Meow"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"Meow\""
+					}
+				}
+			],
+			"sid": 842914887526370
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 753667418827172,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 587880027464806,
+					"parameters": {
+						"layout": "Play"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 510621437671835,
+					"parameters": {
+						"tag": "\"Meow\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 766782939466481,
+					"parameters": {
+						"variable": "score",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 282043383851522
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 993562571008000,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 569214826372332,
+					"parameters": {
+						"layout": "Play"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 651801529991125,
+					"parameters": {
+						"tag": "\"Meow\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 758764155902757,
+					"parameters": {
+						"variable": "score",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 426551781532989
+		}
+	],
+	"sid": 106502226770385
+}

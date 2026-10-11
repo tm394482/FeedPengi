@@ -1,0 +1,33 @@
+{
+	"name": "Event sheet 4",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 667785340959861
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 151357717780085,
+					"parameters": {
+						"audio-file": {
+							"path": "Outro"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"Outro\""
+					}
+				}
+			],
+			"sid": 769765219331843
+		}
+	],
+	"sid": 249637425040454
+}

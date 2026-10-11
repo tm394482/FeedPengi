@@ -1,0 +1,10 @@
+{
+	"name": "StartText2",
+	"plugin-id": "Text",
+	"sid": 234785774216063,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

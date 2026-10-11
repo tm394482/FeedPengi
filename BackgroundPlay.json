@@ -1,0 +1,23 @@
+{
+	"name": "BackgroundPlay",
+	"plugin-id": "TiledBg",
+	"sid": 270834737902002,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 3000,
+		"height": 1550,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/jpeg",
+		"imageSpriteId": 7280418,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

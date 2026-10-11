@@ -1,0 +1,56 @@
+{
+	"name": "Ice1",
+	"plugin-id": "Sprite",
+	"sid": 421211042666535,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 577,
+						"height": 432,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9382312,
+						"collisionPoly": {
+							"points": [
+								0.5147313691507799,
+								0.0787037037037037,
+								0.5961871750433275,
+								0.11574074074074074,
+								0.587521663778163,
+								0.8425925925925926,
+								0.48180242634315423,
+								0.8888888888888888,
+								0.4090121317157712,
+								0.8310185185185185,
+								0.41074523396880414,
+								0.11574074074074074
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 815982012718834,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

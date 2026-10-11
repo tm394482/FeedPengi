@@ -1,0 +1,283 @@
+{
+	"name": "Event sheet 2",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "score",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 508801535254122
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 621913229375602
+				}
+			],
+			"actions": [
+				{
+					"id": "set-image-offset-x",
+					"objectClass": "BackgroundPlay",
+					"sid": 467822655907044,
+					"parameters": {
+						"offset-x": "Self.ImageOffsetX-350*dt"
+					}
+				},
+				{
+					"id": "set-image-offset-x",
+					"objectClass": "Border",
+					"sid": 669137082950144,
+					"parameters": {
+						"offset-x": "Self.ImageOffsetX-350*dt"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "Ice2",
+					"sid": 334522782673696,
+					"parameters": {
+						"x": "Self.X-350*dt"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Score",
+					"sid": 434800784444988,
+					"parameters": {
+						"text": "score"
+					}
+				}
+			],
+			"sid": 991905163726712
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-start",
+					"objectClass": "Touch",
+					"sid": 138000453995238
+				}
+			],
+			"actions": [
+				{
+					"id": "set-vector-y",
+					"objectClass": "Pengi",
+					"sid": 842552081806201,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-y": "-1000"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Pengi",
+					"sid": 810943633890641,
+					"parameters": {
+						"animation": "\"jump\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 859254728597995
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 227373961869451,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-vector-y",
+					"objectClass": "Pengi",
+					"sid": 680889490709395,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-y": "-1000"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Pengi",
+					"sid": 545260857594559,
+					"parameters": {
+						"animation": "\"jump\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 593937965378917
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 714790242743194,
+					"parameters": {
+						"interval-seconds": "6"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 887363400510927,
+					"parameters": {
+						"object-to-create": "Ice2",
+						"layer": "0",
+						"x": "3214",
+						"y": "random(141,0)",
+						"create-hierarchy": true,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 927152617579754
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Pengi",
+					"sid": 610152514719892,
+					"parameters": {
+						"object": "fishy"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 342785712110916,
+					"parameters": {
+						"variable": "score",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "fishy",
+					"sid": 939857381338527
+				}
+			],
+			"sid": 455145661017309
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Pengi",
+					"sid": 120323753445627,
+					"parameters": {
+						"object": "Ice1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 919351423874705,
+					"parameters": {
+						"layout": "Lose"
+					}
+				}
+			],
+			"sid": 252289488153382
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Pengi",
+					"sid": 159937483815931,
+					"parameters": {
+						"object": "Ice2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 281642230829766,
+					"parameters": {
+						"layout": "Lose"
+					}
+				}
+			],
+			"sid": 735638869601071
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 748926254062096,
+					"parameters": {
+						"variable": "score",
+						"comparison": 0,
+						"value": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 936895210250418,
+					"parameters": {
+						"layout": "Win"
+					}
+				}
+			],
+			"sid": 567323390946607
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Pengi",
+					"sid": 367444159114860,
+					"parameters": {
+						"object": "Border"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 155009111505080,
+					"parameters": {
+						"layout": "Lose"
+					}
+				}
+			],
+			"sid": 594759895154752
+		}
+	],
+	"sid": 807255069760443
+}

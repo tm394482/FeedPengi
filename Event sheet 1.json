@@ -1,0 +1,99 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 970110355341503
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 121857565522048,
+					"parameters": {
+						"audio-file": {
+							"path": "Narwhals"
+						},
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"narwhals\""
+					}
+				}
+			],
+			"sid": 270945411006287
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 711943321493283,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "PlayButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 534916661614916,
+					"parameters": {
+						"layout": "Play"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 149316211904045,
+					"parameters": {
+						"tag": "\"Narwhals\""
+					}
+				}
+			],
+			"sid": 243807146544050
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 119391417049340,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 769940637337850,
+					"parameters": {
+						"layout": "Play"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 277738202129155,
+					"parameters": {
+						"tag": "\"Narwhals\""
+					}
+				}
+			],
+			"sid": 929771176406797
+		}
+	],
+	"sid": 789305411634579
+}
